@@ -1,0 +1,38 @@
+.{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.contenaire{
+    background:#fff;
+    padding: 30px;
+    border-radius: 8px solid;
+    width: 40%;
+    height: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: auto;
+}
+.contenaire h1 {
+    text-align: center;
+}
+.input{
+    text-align: center;
+    gap: 10px;
+
+#todo{
+    width: 200PX;
+    height: 28px;
+    border: solid;
+}
+#add{
+    height: 30px;
+}
