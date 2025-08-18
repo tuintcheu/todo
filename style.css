@@ -84,6 +84,12 @@ body {
     color: #444;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
+
+/* Ajoute le soulignement uniquement au texte de la tâche */
+#list li .task-text {
+    text-decoration: underline;
+    flex: 1;
+}
 #list li button {
     background: #e74c3c;
     color: #fff;

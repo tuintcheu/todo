@@ -1,21 +1,32 @@
+
+
 let boutton = document.getElementById("add");
+let list = document.getElementById("list");
+
 
 
 boutton.addEventListener("click", () => {
-    
     const val = document.getElementById("todo").value.trim();
-    
     if (val === "") {
         alert("Veuillez remplir le champ svp !!");
     } else {
-        
+  
         const li = document.createElement("li");
-        li.textContent = val;
 
-    
+        
+        const span = document.createElement("span");
+        span.className = "task-text";
+        span.textContent = val;
+
+       
+        span.addEventListener("click", () => {
+            span.style.textDecoration = "line-through";
+        });
+
+        
         const deletebou = document.createElement("button");
         deletebou.textContent = "delete";
-        deletebou.style.marginLeft = "end";
+        deletebou.style.marginLeft = "10px";
 
         
         deletebou.addEventListener("click", () => {
@@ -23,12 +34,11 @@ boutton.addEventListener("click", () => {
         });
 
         
+        li.appendChild(span);
         li.appendChild(deletebou);
+        list.appendChild(li);
 
-        // Ajoute l'élément de liste à la liste ordonnée
-        document.getElementById("list").appendChild(li);
-
-        
+       
         document.getElementById("todo").value = "";
     }
 });
