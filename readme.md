@@ -28,11 +28,13 @@ style.css       # Styles pour l'interface utilisateur
 
 Ce projet est une application web simple de gestion de tâches (to-do list) réalisée en HTML, CSS et JavaScript.
 
+
 ## Fonctionnalités
 - Ajouter une nouvelle tâche à la liste
 - Supprimer une tâche de la liste
-- Souligner une tâche en cliquant sur son texte(tache executer)
-- Interface responsive 
+- Souligner une tâche en cliquant sur son texte (tâche exécutée)
+- Interface responsive
+- Les tâches sont sauvegardées automatiquement grâce au localStorage
 
 ## Structure du projet
 
