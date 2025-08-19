@@ -31,7 +31,14 @@ function addTask(val) {
     span.className = "task-text";
     span.textContent = val;
     span.addEventListener("click", () => {
-        span.style.textDecoration = "line-through";
+        
+        let status = span.style.textDecoration 
+        if(status=="line-through")
+        {
+            span.style.textDecoration="none"
+        }else{
+            span.style.textDecoration="line-through"
+        }
     });
     const deletebou = document.createElement("button");
     deletebou.textContent = "delete";
@@ -45,8 +52,13 @@ function addTask(val) {
     list.appendChild(li);
 }
 
+ const val = document.getElementById("todo").value.trim();
+ const input = document.getElementById("todo")
+ 
+
+
 boutton.addEventListener("click", () => {
-    const val = document.getElementById("todo").value.trim();
+   
     if (val === "") {
         alert("Veuillez remplir le champ svp !!");
     } else {
@@ -54,7 +66,10 @@ boutton.addEventListener("click", () => {
         saveTasksToLocalStorage(); // Met à jour le localStorage après ajout
         document.getElementById("todo").value = "";
     }
+   
 });
+
+
 
 // Restaure les tâches au chargement de la page
 window.addEventListener("DOMContentLoaded", loadTasksFromLocalStorage);

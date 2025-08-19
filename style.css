@@ -103,6 +103,9 @@ body {
 #list li button:hover {
     background: #c0392b;
 }
+.error{
+    border: 3px solid red;
+}
 
 @media (max-width: 600px) {
     .contenaire {
